@@ -1,0 +1,27 @@
+   BENCHMARK INFORMATION
+benchmark definition:    ./doc/examples/benchmark-cpachecker.xml
+name:                    benchmark-cpachecker
+run sets:                noout, with-output-files
+date:                    Sat, 2021-04-10 17:01:31 CST
+tool:                    CPAchecker 2.0.1-svn-37026M
+tool executable:         scripts/cpa.sh
+options:                 -heap 7000M -predicateAnalysis-PredAbsRefiner-ABEl
+property file:           ../../config/properties/unreach-call.prp
+resource limits:
+- memory:                8000.0 MB
+- time:                  900 s
+- cpu cores:             4
+hardware requirements:
+- cpu cores:             4
+- memory:                8000.0 MB
+------------------------------------------------------------
+
+   SYSTEM INFORMATION
+host:                    PC-409-LiangHaowei
+os:                      Linux-4.4.0-19041-Microsoft-x86_64-with-Ubuntu-18.04-bionic
+cpu:                     Intel Core i7-7700 CPU @ 3.60GHz
+- cores:                 8
+- max frequency:         3600.0 MHz
+ram:                     17104.781312 MB
+------------------------------------------------------------
+

@@ -1,0 +1,37 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Project",
+            "request": "launch",
+            "mainClass": "org.sosy_lab.cpachecker.cmdline.CPAMain",
+            "vmArgs": [
+                "-XX:+PerfDisableSharedMem",
+                "-Djava.awt.headless=true",
+                "-Xss1024k",
+                "-Xmx1200M",
+                "-ea"
+            ],
+            "args": [
+                "-config",
+                // "./config/predicateAnalysis-ImpactGlobalRefiner-ABEl.properties",
+                "./config/kInduction.properties",
+                "-spec",
+                // "./config/properties/unreach-call.prp",
+                "./config/properties/unreach-label.prp",
+                "-timelimit",
+                "220s",
+                "./doc/examples/demo.c",
+                // "./doc/examples/const_1-2.c"
+                // "./test/programs/benchmarks/loop-new/count_by_nondet_copy.i"
+            ],
+            "classPaths": [
+                "$Auto"
+            ]
+        }
+    ]
+}

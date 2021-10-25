@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE benchmark PUBLIC "+//IDN sosy-lab.org//DTD BenchExec benchmark 1.9//EN" "https://www.sosy-lab.org/benchexec/benchmark-1.9.dtd">
+<benchmark tool="cpachecker" timelimit="100 s"
+	hardtimelimit="960 s" memlimit="15 GB" cpuCores="8">
+	<rundefinition name="Impact-Loops">
+		<option name="-heap">10000M</option>
+		<option name="-timelimit">60s</option>
+		<option name="-config">config/predicateAnalysis-ImpactGlobalRefiner-ABEl.properties</option>
+
+		<tasks name="ReachSafety-New">
+			<includesfile>../../programs/benchmarks/ReachSafety-Loops-Simple-ll.set</includesfile>
+			<propertyfile>../../programs/benchmarks/properties/unreach-call.prp</propertyfile>
+		</tasks>
+	</rundefinition>
+</benchmark>
